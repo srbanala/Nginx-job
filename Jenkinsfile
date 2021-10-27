@@ -4,7 +4,7 @@ pipeline {
          stages {
              stage('Test') {
                           steps {
-                                  echo 'Testing...Lovely...tried again another change!'
+                                  echo 'Still not working what to do!'
 
                                 }
                                }
