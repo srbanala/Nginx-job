@@ -1,7 +1,8 @@
 #!/usr/bin/env groovy
 pipeline {
         agent {
-                docker { image 'anreddy/nginx' }
+                #echo "$DOCKER_PASSWORD"|docker login -u "$DOCKER_ID" --password-stdin
+                docker { image 'anreddy/nginx-image' }
                 }
          stages {
                 stage ('Test') {
