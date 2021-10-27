@@ -1,10 +1,6 @@
 pipeline {
-        agent {
-            dockerfile {
-             filename 'Dockerfile.nginx'
-            }
-         }
-        stages {
+        agent any
+         stages {
              stage('Test') {
                           steps {
                                   echo 'Testing...!asssa!!!!!!'
