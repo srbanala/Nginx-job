@@ -1,12 +1,12 @@
 pipeline {
-        agent any
+        agent { dockerfile true}
 
         stages {
-            stage('Build') {
-                         steps {
-                                docker { docker build -t  anreddy/nginx_jenkin .}
-                                }
-                            }
+        #    stage('Build') {
+         #                steps {
+         #                       docker { docker build -t  anreddy/nginx_jenkin .}
+          #                      }
+           #                 }
             stage('Test')   {
                           steps {
                                   echo 'Testing...!!!!!!!'
