@@ -1,0 +1,11 @@
+version: '3'
+services:
+  web_nginx:
+    image: nginx
+    ports:
+      - "9000:80"
+
+    volumes:
+      - C:\Users\anred\Dev\trydjango\myenv\Nginx:/usr/share/nginx/html
+
+
