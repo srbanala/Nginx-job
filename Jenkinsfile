@@ -1,13 +1,16 @@
 pipeline {
         agent {
-            docker { image 'nginx' }
-            }
-
+            dockerfile {
+             filename 'Dockerfile.nginx'
+             dir 'build'
+             label 'my defined label'
+           }
+         }
         stages {
              stage('Test') {
                           steps {
                                   echo 'Testing...!!!!!!!'
-                                  sh 'node --version'
+                                  
                                 }
                                }
                           }
