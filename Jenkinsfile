@@ -4,7 +4,7 @@ pipeline {
          stages {
              stage('Test') {
                           steps {
-                                  echo 'Rebuilding the pipeline .Hopefully it works.Still no luck!'
+                                  echo 'Rebuilding the pipeline .Hopefully it works.Still no luck one more time!'
 
                                 }
                                }
