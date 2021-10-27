@@ -1,6 +1,6 @@
 pipeline {
         agent {
-            docker { image 'anreddy/nginx' }
+            docker { image 'nginx' }
             }
 
         stages {
