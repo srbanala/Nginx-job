@@ -14,7 +14,7 @@ pipeline {
                                }
             stage('Deploy') {
                             steps{
-                                 from anreddy/nginx_jenkin
+                                 docker run  anreddy/nginx_jenkin
                                 }
                                }
               }
