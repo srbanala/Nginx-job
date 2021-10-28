@@ -1,14 +1,22 @@
 #!/usr/bin/env groovy
-pipeline {
-        agent {
-                
-                docker { image 'anreddy/nginx-image' }
-                }
-         stages {
-                stage ('Test') {
-                    steps {
-                     sh 'node --version'
-                    }
-                }
-             }
-        }
+#pipeline {
+ ##
+   #             docker { image 'anreddy/nginx-image' }
+    ###          stage ('Test') {
+       ##             sh 'node --version'
+         #           }
+          #      }
+           #  }
+        #}
+
+
+
+ pipeline {
+            agent any
+            stages {
+                stage ('Build'){
+                echo "Hello world"}
+
+            }
+            }
+            
