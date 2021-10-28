@@ -1,14 +1,12 @@
-#!/usr/bin/env groovy
 pipeline {
-        agent {
-                docker { image 'anreddy/nginx-image' }
-                }
-        stages{
-                stage ('Build') {
-                    steps {
-                    echo "Hello world"
-                   }
-                 }
-         }
-
+    agent {
+        docker { image 'node:14-alpine' }
+    }
+    stages {
+        stage('Test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
 }
