@@ -12,9 +12,13 @@ pipeline {
             }
         stage('Deploy'){
             steps {
-              docker run -t anreddy/nginx-image
-            }
-            }
+                agent {
+                     docker {
+                             run -p 80:80 -t anreddy/nginx-image
+                                }
+                      }
+                }
+               }
             }
         }
 
