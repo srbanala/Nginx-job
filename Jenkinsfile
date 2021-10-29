@@ -1,6 +1,6 @@
 pipeline {
     agent {
-           docker {
+          sudo  docker {
                     image 'anreddy/nginx-image'
                   }
                   }
