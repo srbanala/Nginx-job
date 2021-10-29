@@ -7,7 +7,6 @@ pipeline {
     stages{
         stage ('Build'){
             steps {
-                #docker run 'anreddy/nginx-image'
                 echo "Welcome to Docker"
                 }
             }
