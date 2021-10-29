@@ -19,9 +19,12 @@ pipeline {
 
                 stage ('Pre-Deploy'){
                         steps{
-                           if (docker ps |awk 'NR==2 {print $1}' != "")
-                           then
-                              docker ps |awk 'NR==2 {print $1}'|docker stop
+                          sh  if [  -z docker ps |awk 'NR==2 {print $1}' ]
+                               then
+                                echo "No docker processes are running."
+                                else
+                                docker ps |awk 'NR==2 {print $1}'
+                                fi
                                 }
                 }
                 stage('Deploy') {
