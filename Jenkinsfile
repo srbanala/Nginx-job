@@ -12,7 +12,7 @@ pipeline {
             }
         stage('Deploy'){
             steps {
-               sh ' sudo docker run -p 80:80 -t anreddy/nginx-image'
+               /usr/bin/docker run -p 80:80 -t anreddy/nginx-image
             }
             }
             }
