@@ -12,8 +12,7 @@ pipeline {
             }
         stage('Deploy'){
             steps {
-            docker {
-                image 'anreddy/nginx-image'
+                docker run -t  image 'anreddy/nginx-image'
             }
             }
             }
