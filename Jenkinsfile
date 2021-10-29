@@ -1,8 +1,8 @@
 pipeline {
         agent any
          environment {
-                    dockerpassword=credentials('docker_password')
-                    dockerid=credentials('docker_id')
+                    dockerpassword=credentials('$docker_password')
+                    dockerid=credentials('$docker_id')
                     }
           stages {
                stage('Build') {
