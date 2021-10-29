@@ -16,7 +16,6 @@ pipeline {
                          args 'run -p 80:80'
                          }
                         }
-                echo 'Welcome to Jenkins'
-            }
+                }
     }
 }
