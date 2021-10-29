@@ -6,6 +6,9 @@ pipeline {
           stages {
 
                stage('Build'){
+                    when {
+                      branch 'feature'
+                      }
                     steps{
                          sh 'docker build -t anreddy/nginx-image .'
                          }
@@ -18,6 +21,9 @@ pipeline {
                            }
 
                 stage('Deploy') {
+                        when {
+                          branch 'main'
+                          }
                         steps {
                         sh 'echo "$DOCKER_CREDS_PSW"|docker login -u "$DOCKER_CREDS_USR" --password-stdin'
                         sh 'docker run -d -p 80:80 -t anreddy/nginx-image'
