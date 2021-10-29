@@ -1,12 +1,10 @@
 pipeline {
-    agent {
-        docker { image 'node:14-alpine' }
-    }
-    stages {
-        stage('Test') {
-            steps {
-                sh 'node --version'
-            }
+        agent any
+              stages {
+                     stage ('Build') {
+                        steps {
+                        echo 'WellDone.Aws Jenkins installation Complete.'
+                        }
         }
-    }
-}
+        }
+        }
