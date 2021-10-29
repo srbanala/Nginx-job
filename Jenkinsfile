@@ -13,7 +13,7 @@ pipeline {
 
                 stage ('Test'){
                      steps {
-                           sh 'docker run -t anreddy/nginx-image echo "Test succesful" '
+                           sh 'docker run -t anreddy/nginx-image echo "Test succesful.Added new feature branch." '
                             }
                            }
 
