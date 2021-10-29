@@ -1,15 +1,12 @@
 pipeline {
     agent {
-           docker {
-                    image 'anreddy/nginx-image'
-                  }
-            }
-    stages  {
-        stage ('Build') {
+        docker { image 'node:14-alpine' }
+    }
+    stages {
+        stage('Test') {
             steps {
-                echo "Welcome to Docker"
-                }
+                sh 'node --version'
             }
-          }
         }
-
+    }
+}
