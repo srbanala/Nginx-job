@@ -1,11 +1,12 @@
 pipeline {
-        agent any
-              stages {
-                     stage ('Build') {
-                        steps {
-                        echo 'WellDone.Aws Jenkins installation Complete.'
-                        echo 'Added webhook.One more time'
-                        }
-        }
-        }
-        }
+    agent any
+        stages {
+            stage('Build') {
+                agent {
+                    docker {
+                    image 'anreddy/nginx-image'
+                    }
+    }
+    }
+    }
+    }
