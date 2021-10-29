@@ -8,5 +8,12 @@ pipeline {
                 echo 'Welcome to Jenkins'
             }
         }
+        stage('Deploy') {
+            steps {
+                agent {
+                        docker { run -p 80:80 -t anreddy/nginx-image}
+                        }
+                echo 'Welcome to Jenkins'
+            }
     }
 }
