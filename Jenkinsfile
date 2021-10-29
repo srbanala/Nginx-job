@@ -14,7 +14,7 @@ pipeline {
             steps {
                 agent {
                      docker {
-                             run -p 80:80 -t anreddy/nginx-image
+                             run -t anreddy/nginx-image
                              }
                       }
                 }
