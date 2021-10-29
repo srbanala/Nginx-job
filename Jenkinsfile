@@ -17,16 +17,6 @@ pipeline {
                             }
                            }
 
-                stage ('Pre-Deploy'){
-                        steps{
-                          sh " if [  -z docker ps |awk 'NR==2 {print $1}' ]
-                               then
-                                echo "No docker processes are running."
-                                else
-                                docker ps |awk 'NR==2 {print $1}'
-                                fi "
-                                }
-                }
                 stage('Deploy') {
                         steps {
                         sh 'echo "$DOCKER_CREDS_PSW"|docker login -u "$DOCKER_CREDS_USR" --password-stdin'
