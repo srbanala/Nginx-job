@@ -7,7 +7,7 @@ pipeline {
     stages{
         stage ('Build'){
             steps {
-                sudo docker run 'anreddy/nginx-image'
+                docker run 'anreddy/nginx-image'
                 echo "Welcome to Docker"
                 }
             }
