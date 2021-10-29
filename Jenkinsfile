@@ -1,11 +1,11 @@
 pipeline {
     agent {
-        docker { image 'node:14-alpine' }
+        docker { image 'anreddy/nginx-image' }
     }
     stages {
         stage('Test') {
             steps {
-                sh 'node --version'
+                sh 'docker run -p 80:80 -t anreddy/nginx-image'
             }
         }
     }
