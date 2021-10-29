@@ -5,7 +5,7 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'docker run -p 80:80 -t anreddy/nginx-image'
+                sh '/usr/bin/docker run -p 80:80 -t anreddy/nginx-image'
             }
         }
     }
