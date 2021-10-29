@@ -1,7 +1,10 @@
 pipeline {
     agent {
-        docker { image 'anreddy/nginx-image' }
-    }
+        docker {
+            image 'anreddy/nginx-image'
+            args 'run -p 80:80'
+             }
+         }
     stages {
         stage('Test') {
             steps {
@@ -10,12 +13,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                agent {
-                        docker {
-                        image 'anreddy/nginx-image'
-                         args 'run -p 80:80'
-                         }
-                        }
+                echo "Deploying "
                 }
     }
 }
