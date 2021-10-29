@@ -10,6 +10,13 @@ pipeline {
                 echo "Welcome to Docker"
                 }
             }
+        stage('Deploy'){
+            steps {
+            docker {
+                image 'anreddy/nginx-image'
+            }
+            }
+            }
         }
     }
 
