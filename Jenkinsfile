@@ -1,13 +1,13 @@
 pipeline {
         agent any
          environment {
-                    dockerpassword=credentials('${docker_password}')
-                    dockerid=credentials('${docker_id}')
+                    docker_creds=credentials('docker_id')
+
                     }
           stages {
                stage('Build') {
                 steps {
-                    sh 'echo "$dockerpassword"|docker login -u "$dockerid" --password-stdin'
+                    sh 'echo "$docker_creds_PSW"|docker login -u "$docker_creds_USR" --password-stdin'
                     sh 'docker run -d -p 80:80 -t anreddy/nginx-image'
                 }
         }
