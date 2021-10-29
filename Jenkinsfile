@@ -3,9 +3,9 @@ pipeline {
            docker {
                     image 'anreddy/nginx-image'
                   }
-                  }
-    stages{
-        stage ('Build'){
+            }
+    stages  {
+        stage ('Build') {
             steps {
                 echo "Welcome to Docker"
                 }
@@ -15,11 +15,10 @@ pipeline {
                 agent {
                      docker {
                              run -p 80:80 -t anreddy/nginx-image
-                                }
+                             }
                       }
                 }
                }
             }
         }
-}
 
