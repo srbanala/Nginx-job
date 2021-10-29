@@ -11,7 +11,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 agent {
-                        docker { run -p 80:80 -t anreddy/nginx-image}
+                        docker { run -p 80:80  image 'anreddy/nginx-image'}
                         }
                 echo 'Welcome to Jenkins'
             }
